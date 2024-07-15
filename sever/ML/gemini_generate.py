@@ -85,7 +85,7 @@ def thisfunctionreturnresult(content, amount, model):
     Answer_done = Df['Answer']
     return Question_done, Answer_done
 
-gemini_api_key = "AIzaSyAPLLmfELgkcM1h3xTby08vfgbFOfladoE"
+gemini_api_key = "xxxxxxxxxxxxxxxxxxxxxx"
 genai.configure(api_key=gemini_api_key)
 model = genai.GenerativeModel('gemini-pro')
 
