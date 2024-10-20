@@ -6,7 +6,8 @@ const { FlashcardSet, Flashcard } = require('../models/Flashcard.model');
 router.post('/sets', async (req, res) => {
   try {
     const flashcardSet = new FlashcardSet({
-      setName: req.body.setName
+      setName: req.body.setName,
+      Create_Author: req.body.Create_Author
     });
 
     const savedSet = await flashcardSet.save();

@@ -8,6 +8,10 @@ gemini_api_key = "AIzaSyAPLLmfELgkcM1h3xTby08vfgbFOfladoE"
 genai.configure(api_key=gemini_api_key)
 model = genai.GenerativeModel('gemini-pro')
 
+@app.route('/hello', methods=['GET'])
+def hello():
+    return "Hello, World!"
+
 @app.route('/generate-prompt', methods=['POST'])
 def generate_prompt():
     data = request.json

@@ -1,159 +1,24 @@
-Flashcard 1
-Front: Ambition
-Back: ความทะเยอทะยาน
+1.
 
-Flashcard 2
-Front: Courage
-Back: ความกล้าหาญ
+Front: Accountability
+Back: ความรับผิดชอบ
 
-Flashcard 3
+2.
+
 Front: Diplomacy
 Back: การทูต
 
-Flashcard 4
-Front: Ideology
-Back: อุดมการณ์
+3.
 
-Flashcard 5
-Front: Leadership
-Back: ความเป็นผู้นำ
+Front: Integrity
+Back: ความซื่อสัตย์สุจริต
 
-Flashcard 6
-Front: Negotiation
-Back: การเจรจาต่อรอง
+4.
 
-Flashcard 7
-Front: Patriotism
-Back: ความรักชาติ
+Front: Lobbyist
+Back: กลุ่มผลประโยชน์
 
-Flashcard 8
-Front: Policy
-Back: นโยบาย
+5.
 
-Flashcard 9
-Front: Power
-Back: อำนาจ
-
-Flashcard 10
-Front: Propaganda
-Back: โฆษณาชวนเชื่อ
-
-Flashcard 11
-Front: Reform
-Back: การปฏิรูป
-
-Flashcard 12
-Front: Revolution
-Back: การปฏิวัติ
-
-Flashcard 13
-Front: Sovereignty
-Back: อำนาจอธิปไตย
-
-Flashcard 14
-Front: Terrorism
-Back: การก่อการร้าย
-
-Flashcard 15
-Front: Tyranny
-Back: การปกครองแบบทรราช
-
-Flashcard 16
-Front: Bureaucracy
-Back: ระบบราชการ
-
-Flashcard 17
-Front: Capitalism
-Back: ระบบทุนนิยม
-
-Flashcard 18
-Front: Communism
-Back: ระบบคอมมิวนิสต์
-
-Flashcard 19
-Front: Democracy
-Back: ระบอบประชาธิปไตย
-
-Flashcard 20
-Front: Dictatorship
-Back: ระบอบเผด็จการ
-
-Flashcard 21
-Front: Federalism
-Back: ระบอบสหพันธรัฐ
-
-Flashcard 22
-Front: Monarchy
-Back: ระบอบกษัตริย์
-
-Flashcard 23
-Front: Oligarchy
-Back: ระบอบปกครองโดยชนชั้นสูง
-
-Flashcard 24
-Front: Republic
-Back: ระบอบสาธารณรัฐ
-
-Flashcard 25
-Front: Socialism
-Back: ระบบสังคมนิยม
-
-Flashcard 26
-Front: Theocracy
-Back: ระบอบปกครองโดยนักบวช
-
-Flashcard 27
-Front: Absolutism
-Back: ระบอบสมบูรณาญาสิทธิราชย์
-
-Flashcard 28
-Front: Authoritarianism
-Back: ระบอบอำนาจนิยม
-
-Flashcard 29
-Front: Charisma
-Back: เสน่ห์
-
-Flashcard 30
-Front: Constituency
-Back: กลุ่มผู้เลือกตั้ง
-
-Flashcard 31
-Front: Lobbying
-Back: การล็อบบี้ยิสต์
-
-Flashcard 32
-Front: Opposition
-Back: ฝ่ายค้าน
-
-Flashcard 33
-Front: Platform
-Back: แนวทางการเมือง
-
-Flashcard 34
-Front: Public opinion
-Back: ความคิดเห็นของประชาชน
-
-Flashcard 35
-Front: Redistricting
-Back: การแบ่งเขตเลือกตั้งใหม่
-
-Flashcard 36
-Front: Suffrage
-Back: สิทธิเลือกตั้ง
-
-Flashcard 37
-Front: Voter turnout
-Back: อัตราผู้มาใช้สิทธิ์เลือกตั้ง
-
-Flashcard 38
-Front: Amnesty
-Back: นิรโทษกรรม
-
-Flashcard 39
-Front: Impeachment
-Back: การถอดถอนจากตำแหน่ง
-
-Flashcard 40
-Front: Veto
-Back: การยับยั้งชั่งใจ
+Front: Partisanship
+Back: การแบ่งฝักแบ่งฝ่าย

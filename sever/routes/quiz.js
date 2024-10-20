@@ -85,7 +85,7 @@ router.put('/class/:classId/stage/:stageId', async (req, res) => {
   
   try {
     // Find the stage by ID and update it
-    const updatedStage = await Quiz_Stage.findOneAndUpdate(
+    const updatedStage = await Quiz_stage.findOneAndUpdate(
       { _id: stageId, classId: classId }, // Find by stage ID and class ID
       { $set: req.body }, // Update with the request body
       { new: true } // Return the updated document

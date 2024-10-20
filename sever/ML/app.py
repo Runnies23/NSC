@@ -1,8 +1,10 @@
 import pandas as pd
-from flask import Flask, request, jsonify
+from fastapi import FastAPI, HTTPException, Request
+from pydantic import BaseModel
 import google.generativeai as genai
 
-app = Flask(__name__)
+app = FastAPI()
+
 #==========================================================================================================
 
 def parse_flashcards(text):
@@ -90,34 +92,31 @@ model = genai.GenerativeModel('gemini-pro')
 
 #==========================================================================================================
 
-#OCR 
+class FlashcardRequest(BaseModel):
+    prompt: str
+    amount: int
 
-
-
-
-#==========================================================================================================
-
-@app.route('/hello', methods=['GET'])
-def hello():
+@app.get("/hello")
+async def hello():
     return "Hello, World!"
     
-@app.route('/generate-flashcards', methods=['POST'])
-def generate_flashcards():
-    data = request.json
-    content = data.get('prompt')
-    amount = data.get('amount')
+@app.post("/generate-flashcards")
+async def generate_flashcards(request: FlashcardRequest):
+    content = request.prompt
+    amount = request.amount
 
     if not content or not amount:
-        return jsonify({'error': 'Missing prompt or amount'}), 400
+        raise HTTPException(status_code=400, detail="Missing prompt or amount")
 
     try:
         questions, answers = thisfunctionreturnresult(content, amount, model)
         flashcards = [{'question': q, 'answer': a} for q, a in zip(questions, answers)]
-        return jsonify(flashcards)
+        return flashcards
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        raise HTTPException(status_code=500, detail=str(e))
     
 #==========================================================================================================
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=5000, log_level="info")

@@ -99,7 +99,7 @@ router.get('/:firebaseUID', async (req, res) => {
 //=====================================================================================
 router.put('/:firebaseUID/gain_level', async (req, res) => {
   const { firebaseUID } = req.params;
-  const { gainedExp } = req.body;
+  const { gainedExp , gainCoin } = req.body;
 
   try {
     // Find the current user data
@@ -109,8 +109,9 @@ router.put('/:firebaseUID/gain_level', async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    let { exp, level } = user;
+    let { exp, level, coin } = user;
     exp += gainedExp;
+    coin += gainCoin;
 
     // Function to calculate max exp for next level
     const calculateMaxExp = (currentLevel) => {
@@ -150,7 +151,8 @@ router.put('/:firebaseUID/gain_level', async (req, res) => {
       { 
         $set: { 
           exp: exp,
-          level: level
+          level: level,
+          coin: coin
         }
       },
       { new: true }

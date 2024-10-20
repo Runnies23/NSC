@@ -1,14 +1,22 @@
 from flask import Flask, request, jsonify
-import pytesseract
 from PIL import Image
 import io
 import base64
-from transformers import pipeline
+import cv2
+import easyocr
+import numpy as np 
 
 app = Flask(__name__)
+reader = easyocr.Reader(['th'])
 
-# Initialize LLM
-generator = pipeline('text-generation', model='gpt2')
+def ImageAugment(image):
+    # Convert PIL image to OpenCV format
+    open_cv_image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
+    grayinput = cv2.cvtColor(open_cv_image, cv2.COLOR_BGR2GRAY)
+    _, binaryImage = cv2.threshold(grayinput, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    result = reader.readtext(binaryImage)
+    text_only = [item[1] for item in result]
+    return text_only
 
 @app.route('/process_image', methods=['POST'])
 def process_image():
@@ -17,21 +25,10 @@ def process_image():
     image = Image.open(io.BytesIO(image_data))
 
     # Perform OCR
-    text = pytesseract.image_to_string(image)
-
-    # Generate flashcard using LLM
-    prompt = f"Create a flashcard question and answer based on this text: {text}"
-    generated_text = generator(prompt, max_length=100, num_return_sequences=1)[0]['generated_text']
-
-    # Extract question and answer (this is a simple approach, you might need more sophisticated parsing)
-    parts = generated_text.split('\n')
-    question = parts[0] if len(parts) > 0 else ""
-    answer = parts[1] if len(parts) > 1 else ""
+    text = ImageAugment(image)
 
     return jsonify({
-        'original_text': text,
-        'question': question,
-        'answer': answer
+        'OCR_Text': text
     })
 
 if __name__ == '__main__':

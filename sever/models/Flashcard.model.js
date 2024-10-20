@@ -9,6 +9,11 @@ const FlashcardSetSchema = new Schema({
     required: true,
     trim: true
   },
+  Create_Author: {
+    type: String,
+    required: true,
+    trim: true
+  },
   Played: {
     type: Number,
     required: true,
