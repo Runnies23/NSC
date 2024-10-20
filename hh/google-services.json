@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "512508273400",
+    "project_id": "nscproject-d5898",
+    "storage_bucket": "nscproject-d5898.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512508273400:android:305bad5c3b2a15b829510d",
+        "android_client_info": {
+          "package_name": "nsc_flashchem.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512508273400-k2joic3qongheolp4caf6k0imc23od9c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmVmg51hHWZh3n-vLbc3XEj75aPElQ9Mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512508273400-k2joic3qongheolp4caf6k0imc23od9c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
